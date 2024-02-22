@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  color: white;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background-color: black;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 40px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 16px;
+  font-size: 1.1em;
+  transition: 0.5s;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: goldenrod;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: goldenrod;
+  color: rgb(68, 60, 60);
+  border: black;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+#product-container {
+  box-sizing: border-box;
+  width: 800px;
+  padding: 30px;
+  margin-top: 120px;
+  /* border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px; */
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.product-card {
+  max-width: 12em;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  border-radius: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product-card img {
+  width: 100%;
+  height: 11vw;
+  object-fit: cover;
+}
+.product-card div {
+  font-size: 1.2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card h4 {
+  font-size: 1.3em;
+  margin: 0.5em 0;
+}
+
+.product-card button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: goldenrod;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 1em;
+}
+.product-card:hover {
+  color: goldenrod;
+  background-color: goldenrod;
+}
+.product-card:hover button {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.product-card:hover h4,
+.product-card:hover span {
+  color: black;
+}
+@media screen and (max-width: 576px) {
+  .product-card {
+    font-size: 0.9em;
+  }
+}
